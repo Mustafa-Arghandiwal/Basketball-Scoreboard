@@ -1,0 +1,215 @@
+.colors {
+    background: #111827;
+    background: #1F2937;
+    background: #374151;
+    background: #4B5563;
+    background: #6B7280;
+    background: #9CA3AF;
+    background: #D1D5DB;
+    background: #E5E7EB;
+    background: #F3F4F6;
+    background: #F9FAFB;
+}
+@font-face {
+    src: url("CursedTimerUlil-Aznm.ttf");
+    font-family: Myfont;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1F2937;
+}
+.wrapper {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    
+}
+
+.scoreboard {
+    background: #111827;
+    width: 80%;
+    height: 80vh;
+    border-radius: 1rem;
+    display: flex;
+    
+    
+}
+
+.panel {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.panel .title {
+    
+    height: 15%;
+    display: grid;
+    place-items:center;
+    
+}
+.panel .title p {
+    margin-top: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: .4rem;
+    
+}
+.panel .monitor {
+    /* border: 2px solid red; */
+    height: 60%;
+    /* display:grid;
+    place-content: center; */
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        color: white;
+
+    }
+    
+    to {
+        transform: rotate(360deg);
+        
+        
+    }
+}
+.scoreboard .reset-btn {
+    position: absolute;
+    font-size: 1.3rem;
+    border: none;
+    bottom: -2rem;
+    right: -2.8rem;
+    background: #4B5563;
+    padding: .2rem .8rem .2rem .2rem;
+    border-radius: .3rem;
+    color: white;
+    transition: .2s;
+
+    
+}
+.scoreboard .reset-btn:hover {
+    background-color: #1F2937;
+}
+.scoreboard .reset-btn:active{
+    background-color: #111827;
+}
+
+
+
+.reset-icon {
+    color: #111827;
+    display: inline-block;
+    font-size: 1.5rem;
+    
+}
+.spin {
+    
+    animation-name: spin;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    /* animation-timing-function: linear;  */
+    
+    
+}
+
+
+
+
+.panel .monitor .monitor-screen {
+    width: 60%;
+    height: 80%;
+    background:black;
+    color: red;
+    font-family: Myfont;
+    font-size: 11rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    border-radius: .4rem;
+    
+    
+}
+.normal {
+    box-shadow: 0 0 20px orangered;
+}
+.leading {
+    box-shadow: 0 0 20px green;
+}
+.losing {
+    box-shadow: 0 0 20px red;
+}
+
+
+
+
+.panel .add-points {
+    
+    height: 25%;
+    display: flex;
+    /* width: 60%; */
+    /* row-gap: 30px; */
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.panel .add-points div .btn {
+    width: 4rem;
+    height: 4rem;
+    background: #6B7280;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: .2rem;
+    transition: .2s;
+    
+}
+.home-minus-one, .away-minus-one {
+    width: 4rem;
+    height: 4rem;
+    background: #374151;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: .2rem;
+    transition: .2s;
+
+}
+.home-minus-one ion-icon, .away-minus-one ion-icon {
+    margin-top: .4rem;
+}
+.home-minus-one:hover, .away-minus-one:hover {
+    background-color: #1F2937;
+
+}
+.home-minus-one:active, .away-minus-one:active {
+    background: rgb(165, 49, 49);
+    /* color: #111827; */
+    /* color: red; */
+
+}
+
+.panel .add-points div .btn:hover {
+    background-color: #374151;
+}
+.panel .add-points div .btn:active {
+    background-color: #111827;
+    
+    
+}
